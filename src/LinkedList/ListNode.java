@@ -1,19 +1,35 @@
 package LinkedList;
 
-public class LinkNode {
-  int value;
+public class ListNode {
+  int val;
 //  next是LinkNode对象 LinkNode对象本身就是地址 使用这个来找下一个节点 来组成链表
-  LinkNode next;
+  ListNode next;
 
-  public LinkNode() {
+  public ListNode() {
   }
 
-  public LinkNode(int value) {
-    this.value = value;
+  public ListNode(int value) {
+    this.val = value;
   }
 
-  public LinkNode(int value, LinkNode next) {
-    this.value = value;
+  public ListNode(int value, ListNode next) {
+    this.val = value;
     this.next = next;
   }
+
+
+
+  public static ListNode createLinkedList(int[] arr) {
+    ListNode head;
+    ListNode last = null;
+    for (int i = arr.length - 1; i >= 0; i--) {
+      ListNode node = new ListNode(arr[i]);
+      node.next = last;
+      last = node;
+    }
+    head = last;
+    return head;
+  }
+
+
 }
