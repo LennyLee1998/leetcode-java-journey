@@ -20,13 +20,13 @@ public class LinkedListCycle_141 {
     if (head == null || head.next == null) return false;
     ListNode fast = head;
     ListNode slow = head;
-
+// 空链表、单节点链表一定不会有环
     while (fast != null && fast.next != null) {
-      slow = slow.next;
-      fast = fast.next.next;
-      if (fast == slow) return true;
+      slow = slow.next; //快指针一次移动两步
+      fast = fast.next.next; //慢指针一次移动一步
+      if (fast == slow) return true; //快慢指针相遇
     }
 
-    return false;
+    return false; //走到链表末尾, 表明没有环
   }
 }
