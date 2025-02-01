@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// O(n^2)
+// 三数之和 (3Sum) 的基本结构是：
+// 一个外循环固定第一个数
+// 然后用双指针(left和right)找剩下的两个数
+
 //https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0015.%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C.md
 //https://leetcode.com/problems/3sum/description/
 //如果nums[i] + nums[left] + nums[right] > 0 就说明 此时三数之和大了，因为数组是排序后了，所以right下标就应该向左移动，这样才能让三数之和小一些。
