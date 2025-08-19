@@ -13,6 +13,8 @@ node_modules/
 *.iml
 .vscode/
 *.user
+*.drawio
+*.drawio.bkp
 
 # 环境和日志
 .env
