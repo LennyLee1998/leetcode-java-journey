@@ -10,7 +10,7 @@ package Array;
  * @create 2025-08-19
  */
 //https://leetcode.com/problems/container-with-most-water/submissions/1740638221/
-public class MaxArea {
+public class ContainerWithMostWater {
   public int maxArea(int[] height) {
     int l = 0, r = height.length - 1;
     int maxArea = 0;
